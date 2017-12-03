@@ -42,13 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user->setPassword($password);
         $user->setCreatedAt(new DateTime());
 
-        //echo $user;
-        //debug_value($user);
-
         $userModel = new UserMySQL($db);
-        //debug_value($userModel);
-        //die();
-        $userModel->add($user);
+        
         if ($userModel->add($user)) {
 
             // par défaut on connecte l'utilisateur avec la fonction authenticate

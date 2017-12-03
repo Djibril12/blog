@@ -3,6 +3,8 @@ class Validator
 {
     public static function validUsername($name, $min = 4, $max = 30)
     {
+        echo $name;
+        
         if (preg_match('/[a-zA-Z0-9]{' . $min . ',' . $max . '}/', $name)) {
             return true;
         }
