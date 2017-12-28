@@ -4,15 +4,15 @@ require __DIR__ . DIRECTORY_SEPARATOR .'config' . DIRECTORY_SEPARATOR .'config.p
 //echo dirname(__DIR__);
 
 // fonction de debug
-function debug_value ( $variable ) {
-    echo '<pre>';
-    if ( is_array( $variable ) )  {
-        print_r ( $variable );
-    } else {
-        var_dump ( $variable );
-    }
-    echo '</pre>';
-}
+//function debug_value ( $variable ) {
+//    echo '<pre>';
+//    if ( is_array( $variable ) )  {
+//        print_r ( $variable );
+//    } else {
+//        var_dump ( $variable );
+//    }
+//    echo '</pre>';
+//}
 
 set_include_path(
     LIBRARY_PATH .
@@ -37,7 +37,7 @@ try {
     
 } catch (Exception $e) {
     $titlePage = "Une erreur interne s'est produite";
-    include ERREUR . 'error.phtml';
+    include '/web/error.php';
     exit;
 }
 session_start();

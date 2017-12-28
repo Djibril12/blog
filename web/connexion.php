@@ -1,6 +1,6 @@
 <?php
 
-include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'init.php';
+require dirname(__DIR__). DIRECTORY_SEPARATOR . 'init.php';
 
 $username = isset($_POST['username']) ? $_POST['username'] : null;
 $password = isset($_POST['password']) ? $_POST['password'] : null;
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }else 
     {
-        debug_value($errors);
+        echo 'erreur !!!';
     }
 }
 
