@@ -1,7 +1,5 @@
 <?php
-
-// register.php
-include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'init.php';
+include 'bootstrap.php';
 
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $username = isset($_POST['username']) ? $_POST['username'] : null;
@@ -61,5 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include VIEWS_INS . DIRECTORY_SEPARATOR . 'inscription.phtml';
+echo $twig->render('inscription.twig');
+//include VIEWS_INS . DIRECTORY_SEPARATOR . 'inscription.phtml';
 ?>

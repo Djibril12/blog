@@ -40,4 +40,4 @@ try {
     include '/web/error.php';
     exit;
 }
-session_start();
+//session_start();
